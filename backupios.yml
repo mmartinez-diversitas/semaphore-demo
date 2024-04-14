@@ -1,9 +1,6 @@
 ---
-- name: Get show running-config of Cisco device
-  hosts: all
-  gather_facts: yes
-  tasks:
-  - name: Backup current switch config (ios)
-  ios_config:
+- name: Backup current switch config (ios)
+  cisco.ios.ios_config:
     backup: yes
   register: backup_ios_location
+  when: ansible_network_os == 'cisco.ios.ios'
