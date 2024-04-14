@@ -1,6 +1,10 @@
 ---
-- name: Backup current switch config (ios)
+- name: Get show running-config of Cisco device
   hosts: all
-  cisco.ios.ios_config:
-    backup: yes
-  register: backup_ios_location
+  gather_facts: yes
+  tasks:
+    name: Backup current switch config (ios)
+    hosts: all
+    cisco.ios.ios_config:
+      backup: yes
+    register: backup_ios_location
