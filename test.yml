@@ -1,7 +1,7 @@
 ---
 - name: Get show running-config of Cisco device
   hosts: all
-  gather_facts: no
+  gather_facts: yes
   tasks:
     - name: Show running-config
       ios_command:
