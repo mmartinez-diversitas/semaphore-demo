@@ -3,7 +3,6 @@
   hosts: all
   tasks:
     - name: Show running-config
-      gather_facts: no
       command: show running
       register: running_config
 
