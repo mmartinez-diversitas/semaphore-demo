@@ -1,0 +1,10 @@
+---
+- name: Cambia descripcion test
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: configure interface settings
+      cisco.iosxr.iosxr_config:
+        lines:
+          - description Cambiado con Semaphore by {{ usuario }}
+        parents: interface GigabitEthernet0/0/0/0
