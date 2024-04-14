@@ -1,1 +1,9 @@
+---
+- name: Show running-config of inventory
+  tasks:
+    - name: Show running-config
+      command: show running
+      register: running_config
 
+    - debug:
+        var: running_config.stdout_lines
