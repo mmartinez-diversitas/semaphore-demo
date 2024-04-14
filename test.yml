@@ -1,5 +1,6 @@
 ---
 - name: Show running-config of inventory
+  hosts: all
   tasks:
     - name: Show running-config
       command: show running
