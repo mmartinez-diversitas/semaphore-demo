@@ -4,7 +4,6 @@
   gather_facts: yes
    - tasks:
      name: Backup current switch config (ios)
-     hosts: all
      cisco.ios.ios_config:
        backup: yes
      register: backup_ios_location
