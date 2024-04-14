@@ -4,7 +4,7 @@
   tasks:
     - name: Show running-config
       command: show running
-      register: running_config
+#      register: running_config
 
-    - debug:
-        var: running_config.stdout_lines
+#    - debug:
+#        var: running_config.stdout_lines
