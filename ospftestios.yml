@@ -1,4 +1,9 @@
-- name: Merge provided OSPF V2 configuration
+---
+- name: Get show running-config of Cisco device
+  hosts: all
+  gather_facts: yes
+  tasks:
+  - name: Merge provided OSPF V2 configuration
   cisco.ios.ios_ospfv2:
     config:
       processes:
